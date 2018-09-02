@@ -68,7 +68,7 @@
 		<div>
 			<h3>登録する内容は以下でよろしいですか。</h3>
 			<table>
-				<s:form action="UserCrateCompleteAction">
+				<s:form action="UserCreateCompleteAction">
 					<tr class="box">
 						<td><label>ログインID：</label></td>
 						<td><s:property value="loginUserId" escape="false" /></td>

@@ -11,7 +11,7 @@ public class UserCreateCompleteDAO {
 	private DBConnector dbConnector = new DBConnector();
 	private Connection connection = dbConnector.getConnection();
 	private DateUtil dateUtil = new DateUtil();
-	private String sql = "INSERT INTO login_user_transaction(login_id, login_pass, user_name, insert_date) VALUES(?,?,?,?)";
+	private String sql = "INSERT INTO login_user_transaction (login_id, login_pass, user_name, insert_date) VALUES(?,?,?,?)";
 
 	public void createUser(String loginUserId, String loginUserPassword, String userName) throws SQLException {
 		try {
@@ -22,9 +22,9 @@ public class UserCreateCompleteDAO {
 			preparedStatement.setString(4, dateUtil.getDate());
 
 			preparedStatement.execute();
-		}catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
+		} finally {
 			connection.close();
 		}
 	}
