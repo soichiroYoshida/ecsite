@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+* {
+	font-family: "Yu gothic";
+	font-weight: normal;
+	color: rgb(30,30,30);
+}
+
+.form-reset {
+	margin: 0;
+	padding: 0;
+	background: none;
+	outline: none;
+	appearance: none;
+}
+
+.form {
+	border: 1px solid rgb(186, 186, 186);
+	border-radius: 4px;
+	margin-bottom: 16px;
+	padding: 6px;
+}
+
+.btn-reset {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	appearance: none;
+}
+
+.submit {
+	display: block;
+	margin: 10px auto;
+	padding: 10px 10px 5px 10px;
+	width: 120px;
+	height: 50px;
+	background-color: rgb(255, 168, 28);
+	color: white;
+	font-weight: bold;
+	font-size: 16px;
+	border-radius: 10px;
+	transition: 0.3s;
+}
+
+.submit:hover {
+	opacity: 0.7;
+	transition: 0.3s;
+}
+
+.clear {
+	clear: both;
+}
+
+.header {
+	width: 100%;
+	height: auto;
+	border-bottom: 1px solid rgb(255, 168, 28);
+}
+
+.header-wrapper {
+	width: 90%;
+	height: 80px;
+	margin: 0 auto;
+}
+
+.logo {
+	width: 200px;
+	height: 20px;
+	padding: 20px 10px 10px 20px;
+	float: left;
+}
+
+.logo h1 {
+	font-size: 42px;
+	font-weight: bold;
+	font-family: consolas;
+}
+
+.nav-bar {
+	width: auto;
+	height: auto;
+	float: right;
+	margin-right: 5%;
+}
+
+.nav-bar li {
+	display: inline-block;
+	list-style: none;
+	color: rgb(70, 70, 70);
+}
+
+.nav-bar a {
+	text-decoration: none;
+	font-size: 16px;
+	display: block;
+	padding: 20px 30px 14px 30px;
+	margin: 14px 10px 10px 10px;
+	font-weight: bold;
+	color: white;
+	transition: 0.3s;
+	border-radius: 70px;
+}
+
+.nav-bar a:hover {
+	opacity: 0.6;
+	transition: 0.3s;
+}

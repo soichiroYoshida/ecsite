@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,76 +11,54 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <meta charset="UTF-8">
+<link rel="Stylesheet" href="css/resetCss.css" />
+<link rel="Stylesheet" href="css/commonStyle.css" />
+<link rel="Stylesheet" href="css/homeStyle.css" />
 <title>Home画面</title>
-<style type="text/css">
-	body {
-	margin: 0;
-	padding: 0;
-	line-height: 1.6;
-	letter-spacing: 1px;
-	font-family: Verdana, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #333;
-	background: #fff;
-	}
-	table {
-		text-align: center;
-		margin: 0 auto;
-	}
-
-	/* ecsite LAYOUT */
-	#top {
-		width: 780px;
-		margin: 30px auto;
-		border: 1px solid #333;
-	}
-
-	#header {
-		width: 100%;
-		height: 80px;
-		background-color: black;
-	}
-
-	#main {
-		width: 100%;
-		height: 500px;
-		text-align: center;
-	}
-
-	#footer {
-		width: 100%;
-		height: 80px;
-		background-color: black;
-		clear: both;
-	}
-
-	#text-center {
-		display: inline-block;
-		text-align: center;
-	}
-</style>
 </head>
 <body>
-	<div id="header">
-		<div id="pr">
+	<div class="header">
+	<div class="header-wrapper">
+		<div class="logo">
+			<h1>ECsite</h1>
 		</div>
+		<ul class="nav-bar">
+			<li><s:if test="#session.id != null">
+					<a href="MyPageAction" style="background-color: rgb(255, 168, 28)">マイページ</a>
+				</s:if> <s:else>
+					<a href="LoginAction" style="background-color: rgb(255, 168, 28)">ログイン</a>
+				</s:else>
+			</li>
+			<li>
+				<s:if test="#session.id != null">
+					<a href="LogoutAction" style="background-color: rgb(76, 76, 76)">ログアウト</a>
+				</s:if> <s:else>
+					<a href="UserCreateAction" style="background-color: rgb(76, 76, 76)">新規登録</a>
+				</s:else>
+			</li>
+		</ul>
+		<div class="clear"></div>
 	</div>
-	<div id="main">
-		<div id="top">
-			<p>Home</p>
+	</div>
+	<div class="main">
+		<s:if test="#session.id != null">
+		</s:if> <s:else>
+		<div class="contents">
+			<h2>ログイン / 新規登録</h2>
+			<p>当サイトをご利用の際にはログインをお願い致します。</p>
+			<div class="form-group" align="center">
+				<s:form action="LoginAction">
+					<s:textfield name="loginUserId" class="form-reset form" placeholder="IDもしくはメールアドレス"  />
+					<s:password name="loginPassword" class="form-reset form" placeholder="パスワード"  />
+					<s:submit value="ログイン" class="btn-reset submit"/>
+				</s:form>
+			</div>
+			<p>新規ユーザー登録は<a href='<s:url action="UserCreateAction" />'>こちら</a></p>
 		</div>
-		<div id="text-center">
-			<s:form action="HomeAction">
-				<s:submit value="商品購入" />
-			</s:form>
-			<s:if test="#session.id != null">
-				<p>ログアウトする場合は<a href='<s:url action="LogoutAction" />'>こちら</a></p>
-			</s:if>
-		</div>
+		</s:else>
 	</div>
 	<div id="footer">
-		<div id="pr">
-		</div>
+		<div id="pr"></div>
 	</div>
 </body>
 </html>
