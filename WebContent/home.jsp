@@ -48,7 +48,7 @@
 			<p>当サイトをご利用の際にはログインをお願い致します。</p>
 			<div class="form-group" align="center">
 				<s:form action="LoginAction">
-					<s:textfield name="loginUserId" class="form-reset form" placeholder="IDもしくはメールアドレス"  />
+					<s:textfield name="loginUserId" class="form-reset form" placeholder="ログインID"  />
 					<s:password name="loginPassword" class="form-reset form" placeholder="パスワード"  />
 					<s:submit value="ログイン" class="btn-reset submit"/>
 				</s:form>

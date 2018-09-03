@@ -13,7 +13,7 @@ public class BuyItemDAO {
 	private BuyItemDTO buyItemDTO = new BuyItemDTO();
 
 	public BuyItemDTO getBuyItemInfo() {
-		String sql = "SELECT id, item_name, item_price FROM item_infop transaction";
+		String sql = "SELECT id, item_name, item_price FROM item_info_transaction";
 
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -32,4 +32,4 @@ public class BuyItemDAO {
 	public BuyItemDTO getBuyItemDTO() {
 		return buyItemDTO;
 	}
-} // P31 BuyItemDTO ~
+}

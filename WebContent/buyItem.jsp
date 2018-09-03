@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,7 +78,7 @@
 					</tr>
 					<tr>
 						<td><span>値段</span></td>
-						<td><s:property value="session.buyItem_name" /><span>円</span></td>
+						<td><s:property value="session.buyItem_price" /><span>円</span></td>
 					</tr>
 					<tr>
 						<td><span>購入個数</span></td>
