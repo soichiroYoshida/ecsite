@@ -1,71 +1,29 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%@ include file="jspParts/header.jsp"%><!-- ヘッダー共通部分の読み込み -->
+<%@ page pageEncoding="UTF-8"%><!-- 共通部分のパーツ化にあたって、文字化けを防ぐための記述 -->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Script-Type" content="text/javascript" />
-<meta http-equiv="imagetoolbar" content="no" />
-<meta name="description" content="" />
-<meta name="keywords" content="" />
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"/>
-<title>MyPage画面</title>
-<style type="text/css">
-/* TAG LAYOUT */
-body {
-	margin: 0;
-	padding: 0;
-	line-height: 1.6;
-	letter-spacing: 1px;
-	font-family: Verdana, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #333;
-	background: #fff;
-}
-
-table {
-	text-align: center;
-	margin: 0 auto;
-}
-
-/* ID LAYOUT */
-#top {
-	width: 780px;
-	margin: 30px auto;
-	border: 1px solid #333;
-}
-
-#header {
-	width: 100%;
-	height: 80px;
-	background-color: black;
-}
-
-#main {
-	width: 100%;
-	height: 500px;
-	text-align: center;
-}
-
-#footer {
-	width: 100%;
-	height: 80px;
-	background-color: black;
-	clear: both;
-}
-
-#text-right {
-	display: inline-block;
-	text-align: right;
-}
-</style>
+<title>マイページ | ECsite</title>
 </head>
 <body>
-	<div id="header">
-		<div id="pr"></div>
+	<div class="header">
+		<div class="header-wrapper">
+			<div class="logo">
+				<h1>ECsite</h1>
+			</div>
+			<ul class="nav-bar">
+				<li><s:if test="#session.id != null">
+						<a href="MyPageAction" style="background-color: rgb(255, 168, 28)">マイページ</a>
+					</s:if> <s:else>
+						<a href="LoginAction" style="background-color: rgb(255, 168, 28)">ログイン</a>
+					</s:else></li>
+				<li><s:if test="#session.id != null">
+						<a href="LogoutAction" style="background-color: rgb(76, 76, 76)">ログアウト</a>
+					</s:if> <s:else>
+						<a href="UserCreateAction"
+							style="background-color: rgb(76, 76, 76)">新規登録</a>
+					</s:else></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
 	</div>
 	<div id="main">
 		<div id="top">
@@ -106,14 +64,17 @@ table {
 				</h3>
 			</s:if>
 			<div id="text-right">
-				<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
-				<p>ログアウトする場合は<a href='<s:url action="LogoutAction" />'>こちら</a></p>
+				<p>
+					Homeへ戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a>
+				</p>
+				<p>
+					ログアウトする場合は<a href='<s:url action="LogoutAction" />'>こちら</a>
+				</p>
 			</div>
 		</div>
 	</div>
 	<div id="footer">
-		<div id="pr">
-		</div>
+		<div id="pr"></div>
 	</div>
 </body>
 </html>
