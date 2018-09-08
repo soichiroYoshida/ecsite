@@ -1,0 +1,24 @@
+.item-contents {
+	width: 80%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-item: center;
+}
+
+.left-content {
+	width: 350px;
+	height: auto;
+	margin: 40px;
+}
+
+.right-content {
+	width: 450px;
+	height: auto;
+	margin: 40px;
+}
+
+.right-content h2 {
+	font-size: 24px;
+	font-weight: bold;
+}
