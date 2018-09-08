@@ -7,7 +7,7 @@
 	<div class="header">
 		<div class="header-wrapper">
 			<div class="logo">
-				<h1>ECsite</h1>
+				<img src="images/logo.png" style="width: 300px;">
 			</div>
 			<ul class="nav-bar">
 				<li><s:if test="#session.id != null">
@@ -45,7 +45,7 @@
 		</s:else>
 	</div>
 	<div class="footer">
-		<p>© 2018 internous college</p>
+		<p>© 2018 internous bunguya</p>
 	</div>
 </body>
 </html>

@@ -1,9 +1,11 @@
 .item-contents {
-	width: 80%;
+	width: 100%;
+	min-width: 900px;
 	height: auto;
 	display: flex;
 	justify-content: center;
 	align-item: center;
+	margin-bottom: 40px;
 }
 
 .left-content {
@@ -19,6 +21,43 @@
 }
 
 .right-content h2 {
+	width: 100%;
+	display: block;
 	font-size: 24px;
 	font-weight: bold;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ddd;
+}
+
+.right-content h3 {
+	margin-top: 10px;
+	font-size: 18px;
+}
+
+.pay-area {
+	width: 100%;
+	height: auto;
+	border: 1px solid rgb(255, 168, 28);
+	border-radius: 30px;
+	padding: 20px;
+	margin-top: 40px;
+}
+
+.pay-area h2 {
+	margin-bottom: 10px;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.pay-content {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.pay-content h3 {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 5px;
 }

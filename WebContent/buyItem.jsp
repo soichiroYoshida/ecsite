@@ -8,7 +8,7 @@
 	<div class="header">
 		<div class="header-wrapper">
 			<div class="logo">
-				<h1>ECsite</h1>
+				<img src="images/logo.png" style="width: 300px;">
 			</div>
 			<ul class="nav-bar">
 				<li><s:if test="#session.id != null">
@@ -30,35 +30,37 @@
 	</div>
 	<div class="item-contents">
 		<div class="left-content">
-			<img src="images/note.jpg" style="width: 300px">
+			<img src="images/note.jpg" style="width: 350px">
 		</div>
 		<s:form action="BuyItemAction">
 			<div class="right-content">
 				<h2><s:property value="session.buyItem_name" /></h2>
-				<p><s:property value="session.buyItem_price" />円<p>
-				<ul class="count-item">
-					<select name="count">
-						<option value="1" selected="selected">1</option>
-						<script>
-							for(var i = 2; i < 21; i++) {
-								document.write('<option value="i">' + i + '</option>')
-							}
-						</script>
-					</select>
-				</ul>
+				<h3>価格：￥<s:property value="session.buyItem_price" /><h3>
 				<div class="pay-area">
-					<h2>支払い方法</h2>
-					<input type="radio" name="pay" value="1" checked="checked">コンビニ払い
-					<input type="radio" name="pay" value="2">クレジットカード
-					<s:submit value="購入" class="submit"/>
+					<h2>購入オプション</h2>
+					<div class="pay-content">
+						<h3>支払い方法</h3>
+						<input type="radio" name="pay" value="1" checked="checked">コンビニ払い
+						<br>
+						<input type="radio" name="pay" value="2">クレジットカード
+						<div class="pay-content">
+							<h3>購入個数</h3>
+							￥<s:property value="session.buyItem_price" /> ×
+							<select name="count" class="select">
+								<script>
+									for(var i = 1; i < 21; i++) {
+										document.write('<option value='+ i +'>'+ i +'</option>');
+									}
+								</script>
+							<s:submit value="購入" class="submit"/>
+						</div>
+					</div>
 				</div>
-
 			</div>
-
 		</s:form>
 	</div>
 	<div class="footer">
-		<p>© 2018 internous college</p>
+		<p>© 2018 internous bunguya</p>
 	</div>
 </body>
 </html>

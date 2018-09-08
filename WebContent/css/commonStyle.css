@@ -3,11 +3,25 @@
 * {
 	font-family: "Yu Gothic", "YuGothic", "ヒラギノ角ゴ W3","メイリオ", "Helvetica", "sans-serif";
 	font-weight: normal;
-	color: rgb(30,30,30);
+	color: rgb(70,70,70);
+	line-height: 1.4;
 }
 
-a {
+.select-reset {
+	appearance: none;
+	margin: 0;
+	padding: 0;
+	background: none;
+	outline: none;
+	background: none transparent;
+}
 
+.btn-reset {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	appearance: none;
 }
 
 .form-reset {
@@ -23,14 +37,6 @@ a {
 	border-radius: 4px;
 	margin-bottom: 16px;
 	padding: 6px;
-}
-
-.btn-reset {
-	background-color: transparent;
-	border: none;
-	cursor: pointer;
-	outline: none;
-	appearance: none;
 }
 
 .submit {
@@ -64,13 +70,14 @@ a {
 .header {
 	width: 100%;
 	height: auto;
-	border-bottom: 1px solid rgb(255, 168, 28);
+	box-shadow: 0 0.2px 12px 1px;
 }
 
 .header-wrapper {
-	width: 90%;
-	height: 80px;
+	width: 85%;
+	height: 120px;
 	margin: 0 auto;
+	min-width: 800px;
 }
 
 .logo {
@@ -81,17 +88,11 @@ a {
 	text-decoration: none;
 }
 
-.logo h1 {
-	font-size: 42px;
-	font-weight: bold;
-	font-family: consolas;
-}
-
 .nav-bar {
 	width: auto;
 	height: auto;
 	float: right;
-	margin-right: 5%;
+	margin-top: 35px;
 }
 
 .nav-bar li {
@@ -122,6 +123,7 @@ a {
 	height: 40px;
 	text-align: center;
 	border-top: 1px solid rgb(255, 168, 28);
+	min-width: 900px;
 }
 
 .footer p {
