@@ -1,14 +1,20 @@
 <%@ include file="jspParts/header.jsp"%><!-- ヘッダー共通部分の読み込み -->
 <%@ page pageEncoding="UTF-8"%><!-- 共通部分のパーツ化にあたって、文字化けを防ぐための記述 -->
 <head>
-<title>ログイン | ECsite</title>
+<title>ログイン | ぶんぐや</title>
 </head>
 <body>
 	<div class="header">
 		<div class="header-wrapper">
-			<div class="logo">
-				<img src="images/logo.png" style="width: 300px;">
-			</div>
+			<s:if test="'#session.id != null">
+				<div class="logo">
+					<a href="HomeAction" style=" text-decoration: none;"><img src="images/logo.png" style="width: 300px;"></a>
+				</div>
+			</s:if> <s:else>
+				<div class="logo">
+					<a href="LoginAction" style=" text-decoration: none;"><img src="images/logo.png" style="width: 300px; text-decoration: none;"></a>
+				</div>
+			</s:else>
 			<div class="clear"></div>
 		</div>
 	</div>
@@ -17,7 +23,7 @@
 
 		</s:if>
 		<s:else>
-			<div class="contents">
+			<div class="login-form">
 				<h2>ログイン / 新規登録</h2>
 				<p>当サイトをご利用の際にはログインをお願い致します。</p>
 				<div class="form-group" align="center">

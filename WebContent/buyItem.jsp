@@ -1,15 +1,21 @@
 <%@ include file="jspParts/header.jsp"%><!-- ヘッダー共通部分の読み込み -->
 <%@ page pageEncoding="UTF-8"%><!-- 共通部分のパーツ化にあたって、文字化けを防ぐための記述 -->
 <head>
-<title>購入画面 | ECsite</title>
+<title>購入画面 | ぶんぐや</title>
 <link rel="Stylesheet" href="css/buyItemStyle.css">
 </head>
 <body>
 	<div class="header">
 		<div class="header-wrapper">
-			<div class="logo">
-				<img src="images/logo.png" style="width: 300px;">
-			</div>
+			<s:if test="'#session.id != null">
+				<div class="logo">
+					<a href="HomeAction"><img src="images/logo.png" style="width: 300px; text-decoration: none;"></a>
+				</div>
+			</s:if> <s:else>
+				<div class="logo">
+					<a href="LoginAction"><img src="images/logo.png" style="width: 300px; text-decoration: none;"></a>
+				</div>
+			</s:else>
 			<ul class="nav-bar">
 				<li><s:if test="#session.id != null">
 						<a href="MyPageAction" style="background-color: rgb(255, 168, 28)">マイページ</a>
@@ -36,6 +42,7 @@
 			<div class="right-content">
 				<h2><s:property value="session.buyItem_name" /></h2>
 				<h3>価格：￥<s:property value="session.buyItem_price" /><h3>
+				<p><s:property value="session.caption" /></p>
 				<div class="pay-area">
 					<h2>購入オプション</h2>
 					<div class="pay-content">
@@ -52,6 +59,7 @@
 										document.write('<option value='+ i +'>'+ i +'</option>');
 									}
 								</script>
+							</select>
 							<s:submit value="購入" class="submit"/>
 						</div>
 					</div>

@@ -75,7 +75,7 @@
 
 .header-wrapper {
 	width: 85%;
-	height: 120px;
+	height: 110px;
 	margin: 0 auto;
 	min-width: 800px;
 }
@@ -85,14 +85,13 @@
 	height: auto;
 	padding: 20px 10px 10px 20px;
 	float: left;
-	text-decoration: none;
 }
 
 .nav-bar {
 	width: auto;
 	height: auto;
 	float: right;
-	margin-top: 35px;
+	margin-top: 30px;
 }
 
 .nav-bar li {
@@ -130,27 +129,4 @@
 	margin-top: 15px;
 }
 
-.contents {
-	width: 450px;
-	height: auto;
-	margin: 120px auto;
-	text-align: center;
-	border: 1px solid rgb(255, 168, 28);
-	border-radius: 30px;
-	padding: 20px 20px 40px 20px;
-}
 
-.contents h2 {
-	font-weight: bold;
-	font-size: 24px;
-	margin-top: 20px;
-	margin-bottom: 10px;
-}
-
-.contents p {
-	font-size: 18px;
-}
-
-.form-group {
-	margin: 60px auto;
-}

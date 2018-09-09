@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.contents {
+.login-form {
 	width: 450px;
 	height: auto;
 	margin: 120px auto;
@@ -10,18 +10,17 @@
 	padding: 20px 20px 40px 20px;
 }
 
-.contents h2 {
+.login-form h2 {
 	font-weight: bold;
 	font-size: 24px;
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
 
-.contents p {
+.login-form p {
 	font-size: 18px;
 }
 
 .form-group {
 	margin: 60px auto;
 }
-
