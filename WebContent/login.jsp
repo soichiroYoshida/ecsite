@@ -2,6 +2,7 @@
 <%@ page pageEncoding="UTF-8"%><!-- 共通部分のパーツ化にあたって、文字化けを防ぐための記述 -->
 <head>
 <title>ログイン | ぶんぐや</title>
+<link rel="Stylesheet" href="css/loginStyle.css" />
 </head>
 <body>
 	<div class="header">
@@ -23,7 +24,7 @@
 
 		</s:if>
 		<s:else>
-			<div class="login-form">
+			<div class="form-style">
 				<h2>ログイン / 新規登録</h2>
 				<p>当サイトをご利用の際にはログインをお願い致します。</p>
 				<div class="form-group" align="center">

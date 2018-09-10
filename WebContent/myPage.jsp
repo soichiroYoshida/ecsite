@@ -7,7 +7,7 @@
 <body>
 	<div class="header">
 		<div class="header-wrapper">
-			<s:if test="'#session.id != null">
+			<s:if test="#session.id != null">
 				<div class="logo">
 					<a href="LoginAction"><img src="images/logo.png"></a>
 				</div>
