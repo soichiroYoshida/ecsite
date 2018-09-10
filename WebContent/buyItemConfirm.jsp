@@ -8,11 +8,11 @@
 		<div class="header-wrapper">
 			<s:if test="'#session.id != null">
 				<div class="logo">
-					<a href="HomeAction" style="text-decoration: none;"><img src="images/logo.png" style="width: 300px;"></a>
+					<a href="LoginAction"><img src="images/logo.png" style="width: 300px;"></a>
 				</div>
 			</s:if> <s:else>
 				<div class="logo">
-					<a href="LoginAction" style="text-decoration: none;"><img src="images/logo.png" style="width: 300px;"></a>
+					<a href="GoHomeAction"><img src="images/logo.png" style="width: 300px;"></a>
 				</div>
 			</s:else>
 			<ul class="nav-bar">

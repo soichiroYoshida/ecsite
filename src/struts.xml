@@ -36,6 +36,10 @@
 		<result name="success">userCreateComplete.jsp</result>
 	</action>
 
+	<action name="GoBuyItemAction" class="com.internousdev.ecsite.action.GoBuyItemAction" method="execute">
+		<result name="success">buyItem.jsp</result>
+	</action>
+
 	<action name="BuyItemAction" class="com.internousdev.ecsite.action.BuyItemAction" method="execute">
 		<result name="success">buyItemConfirm.jsp</result>
 		<result name="error">buyItem.jsp</result>

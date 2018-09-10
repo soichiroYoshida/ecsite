@@ -87,6 +87,15 @@
 	float: left;
 }
 
+.logo a {
+	text-decoration: none;
+}
+
+.logo img {
+	padding-bottom: 10px;
+	width: 300px;
+}
+
 .nav-bar {
 	width: auto;
 	height: auto;

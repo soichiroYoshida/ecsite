@@ -11,10 +11,8 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.13.0/dojo/dojo.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <link rel="Stylesheet" href="css/resetCss.css" />
 <link rel="Stylesheet" href="css/commonStyle.css" />
 <link rel="Stylesheet" href="css/loginStyle.css" />
 </head>
-
-</html>

@@ -9,11 +9,11 @@
 		<div class="header-wrapper">
 			<s:if test="'#session.id != null">
 				<div class="logo">
-					<a href="HomeAction"><img src="images/logo.png" style="width: 300px; text-decoration: none;"></a>
+					<a href="loginAction"><img src="images/logo.png"></a>
 				</div>
 			</s:if> <s:else>
 				<div class="logo">
-					<a href="LoginAction"><img src="images/logo.png" style="width: 300px; text-decoration: none;"></a>
+					<a href="GoHomeAction"><img src="images/logo.png"></a>
 				</div>
 			</s:else>
 			<ul class="nav-bar">
