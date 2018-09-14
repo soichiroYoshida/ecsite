@@ -51,10 +51,10 @@
 						<td><input type="text" name="loginPassword" value="" class="form-reset form" /></td>
 					</tr>
 					<tr>
-						<td><label>ユーザー名:</label></td>
+						<td><label>ユーザー名：</label></td>
 						<td><input type="text" name="userName" value="" class="form-reset form" /></td>
 					</tr>
-					<s:submit value="登録" class="submit"/>
+						<s:submit value="登録" class="submit" />
 				</s:form>
 			</table>
 			</div>
