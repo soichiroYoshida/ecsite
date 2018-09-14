@@ -9,7 +9,7 @@
 		<div class="header-wrapper">
 			<s:if test="'#session.id != null">
 				<div class="logo">
-					<a href="GoHomeAction"><img src="images/logo.png"></a>
+					<a href="GoHomeAction"><img src="images/logo.png" style="width: 350px"></a>
 				</div>
 			</s:if> <s:else>
 				<div class="logo">

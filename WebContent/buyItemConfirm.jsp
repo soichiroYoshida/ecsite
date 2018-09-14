@@ -2,6 +2,12 @@
 <%@ page pageEncoding="UTF-8" %> <!-- 共通部分のパーツ化にあたって、文字化けを防ぐための記述 -->
 <head>
 	<title>確認画面 | ぶんぐや</title>
+	<script type="text/javascript">
+	function submitAction(url) {
+		$('form').attr('action', url);
+		$('form').submit();
+	}
+</script>
 </head>
 <body>
 	<div class="header">
