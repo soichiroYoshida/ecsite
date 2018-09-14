@@ -2,6 +2,7 @@
 <%@ page pageEncoding="UTF-8" %> <!-- 共通部分のパーツ化にあたって、文字化けを防ぐための記述 -->
 <head>
 	<title>確認画面 | ぶんぐや</title>
+	<link rel="Stylesheet" href="css/itemConfirmStyle.css" />
 	<script type="text/javascript">
 	function submitAction(url) {
 		$('form').attr('action', url);
@@ -39,47 +40,35 @@
 			<div class="clear"></div>
 		</div>
 	</div>
-	<div id="main">
-		<div id="top">
-			<p>BuyItem</p>
-		</div>
-		<div>
+	<div class="table-area">
 		<s:form action="BuyItemAction">
-			<table>
+			<h2>購入確認</h2>
+			<table class="table">
 				<tr>
-					<td>商品名</td>
+					<th>商品名:</th>
 					<td><s:property value="session.buyItem_name" /></td>
 				</tr>
 				<tr>
-					<td>値段</td>
-					<td><s:property value="session.total_price" /><span>円</span></td>
+					<th>値段:</th>
+					<td><s:property value="session.total_price" />円</td>
 				</tr>
 				<tr>
-					<td>購入個数</td>
-					<td><s:property value="session.count" /><span>個</span></td>
+					<th>購入個数:</th>
+					<td><s:property value="session.count" />個</td>
 				</tr>
 				<tr>
-					<td>支払い方法</td>
+					<th>支払い方法:</th>
 					<td><s:property value="session.pay" /></td>
 				</tr>
 				<tr>
-					<td><br></td>
-				</tr>
-				<tr>
-					<td><input type="button" value="戻る" onclick="submitAction('HomeAction')"/></td>
-					<td><input type="button" value="完了" onclick="submitAction('BuyItemConfirmAction')"/></td>
+					<td><input type="button" value="戻る" onclick="submitAction('HomeAction')" class="submit" style="background-color:rgb(76, 76, 76)"/></td>
+					<td><input type="button" value="完了" onclick="submitAction('BuyItemConfirmAction')" class="submit" /></td>
 				</tr>
 			</table>
 		</s:form>
 		</div>
-		<div>
-			<p>前画面に戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
-			<p>マイページは<a href='<s:url action="MyPageAction" />'>こちら</a></p>
-		</div>
-	</div>
-	<div id="footer">
-		<div id="pr">
-		</div>
+	<div class="footer">
+		<p>© 2018 internous bunguya</p>
 	</div>
 
 </body>

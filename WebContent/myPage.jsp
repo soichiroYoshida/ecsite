@@ -35,7 +35,7 @@
 	</div>
 	<div class="table-area">
 		<s:if test="myPageList == null">
-			<h2>ご購入情報はありません。</h2>
+			<h2 style="margin-top: 10px">ご購入情報はありません。</h2>
 		</s:if>
 		<s:elseif test="message == null">
 			<h2>購入履歴</h2>

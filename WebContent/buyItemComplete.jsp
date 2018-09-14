@@ -1,84 +1,53 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@taglib prefix="s" uri="/struts-tags"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%@ include file="jspParts/header.jsp" %> <!-- ヘッダー共通部分の読み込み -->
+<%@ page pageEncoding="UTF-8" %> <!-- 共通部分のパーツ化にあたって、文字化けを防ぐための記述 -->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Script-Type" content="text/javascript" />
-<meta http-equiv="imagetoolbar" content="no" />
-<meta name="description" content="" />
-<meta name="keywords" content="" />
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"/>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<title>BuyItemComplete画面</title>
-
-<style type="text/css">
-/* TAG LAYOUT */
-body {
-	margin: 0 auto;
-	padding: 0;
-	line-height: 1.6;
-	letter-spacing: 1px;
-	font-family: Verdana, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #333;
-	background: #fff;
-}
-
-table {
-	text-align: center;
-	margin: 0 auto;
-}
-
-/* ID LAYOUT */
-#top {
-	width: 780px;
-	margin: 30px auto;
-	border: 1px solid #333;
-}
-
-#header {
-	width: 100%;
-	height: 80px;
-	background-color: black;
-}
-
-#main {
-	width: 100%;
-	height: 500px;
-	text-align: center;
-}
-
-#footer {
-	width: 100%;
-	height: 80px;
-	backrground-color: black;
-	clear: both;
-}
-</style>
+	<title>確認画面 | ぶんぐや</title>
+	<link rel="Stylesheet" href="css/buyItemCompleteStyle.css" />
+	<script type="text/javascript">
+	function submitAction(url) {
+		$('form').attr('action', url);
+		$('form').submit();
+	}
+</script>
 </head>
 <body>
-	<div id="header">
-		<div id="pr"></div>
-	</div>
-	<div id="main">
-		<div id="top">
-			<p>BuyItemComplete</p>
+	<div class="header">
+		<div class="header-wrapper">
+			<s:if test="'#session.id != null">
+				<div class="logo">
+					<a href="LoginAction"><img src="images/logo.png" style="width: 300px;"></a>
+				</div>
+			</s:if> <s:else>
+				<div class="logo">
+					<a href="GoHomeAction"><img src="images/logo.png" style="width: 300px;"></a>
+				</div>
+			</s:else>
+			<ul class="nav-bar">
+				<li><s:if test="#session.id != null">
+						<a href="MyPageAction" style="background-color: rgb(255, 168, 28)">マイページ</a>
+					</s:if> <s:else>
+						<a href="LoginAction" style="background-color: rgb(255, 168, 28)">ログイン</a>
+					</s:else>
+				</li>
+				<li>
+					<s:if test="#session.id != null">
+						<a href="LogoutAction" style="background-color: rgb(76, 76, 76)">ログアウト</a>
+					</s:if> <s:else>
+						<a href="UserCreateAction" style="background-color: rgb(76, 76, 76)">新規登録</a>
+					</s:else>
+				</li>
+			</ul>
+			<div class="clear"></div>
 		</div>
+	</div>
+	<div class="main">
+		<h2>購入完了</h2>
 		<p>購入手続きが完了いたしました。</p>
-		<div>
-			<a href='<s:url action="MyPageAction"/>'>マイページ</a><span>空の購入履歴の確認が可能です。</span>
-			<p>
-				Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a>
-			</p>
-		</div>
+		<a href='<s:url action="MyPageAction"/>'>マイページ</a>からの購入履歴の確認が可能です。
+		<p>商品画面へ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a></p>
 	</div>
-	<div id="footer">
-		<div id="pr">
-		</div>
+	<div class="footer">
+		<p>© 2018 internous bunguya</p>
 	</div>
 </body>
 </html>
